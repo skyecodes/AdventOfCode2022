@@ -6,12 +6,12 @@ fun main() {
     println(part2(lines))
 }
 
-fun part1(lines: List<String>) = lines.map { it.substring(0, it.length / 2) to it.substring(it.length / 2) }
+private fun part1(lines: List<String>) = lines.map { it.substring(0, it.length / 2) to it.substring(it.length / 2) }
         .map { (a, b) -> a.find { it in b }!!.code }
         .sumOf { getPriority(it) }
 
-fun part2(lines: List<String>) = lines.chunked(3)
+private fun part2(lines: List<String>) = lines.chunked(3)
         .map { (a, b, c) -> a.find { it in b && it in c }!!.code }
         .sumOf { getPriority(it) }
 
-fun getPriority(char: Int) = if (char > 90) char % 96 else char % 64 + 26
+private fun getPriority(char: Int) = if (char > 90) char % 96 else char % 64 + 26

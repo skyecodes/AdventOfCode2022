@@ -6,6 +6,6 @@ fun main() {
     println(part2(values))
 }
 
-fun part1(values: List<Int>): Int = values.max()
+private fun part1(values: List<Int>): Int = values.max()
 
-fun part2(values: List<Int>): Int = values.sortedDescending().take(3).sum()
+private fun part2(values: List<Int>): Int = values.sortedDescending().take(3).sum()

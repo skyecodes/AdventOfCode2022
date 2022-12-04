@@ -6,4 +6,4 @@ fun main() {
     println(compute(input, listOf("B X", "C X", "A X", "A Y", "B Y", "C Y", "C Z", "A Z", "B Z")))
 }
 
-fun compute(input: List<String>, scores: List<String>): Int = input.sumOf { scores.indexOf(it) + 1 }
+private fun compute(input: List<String>, scores: List<String>): Int = input.sumOf { scores.indexOf(it) + 1 }
