@@ -11,6 +11,6 @@ fun main() {
     println(part2(pairs))
 }
 
-fun part1(pairs: List<Pair<Pair<Int, Int>, Pair<Int, Int>>>): Int = pairs.count { (a, b) -> a.first <= b.first && a.second >= b.second || b.first <= a.first && b.second >= a.second }
+private fun part1(pairs: List<Pair<Pair<Int, Int>, Pair<Int, Int>>>): Int = pairs.count { (a, b) -> a.first <= b.first && a.second >= b.second || b.first <= a.first && b.second >= a.second }
 
-fun part2(pairs: List<Pair<Pair<Int, Int>, Pair<Int, Int>>>): Int = pairs.count { (a, b) -> a.first <= b.first && a.second >= b.first || b.first <= a.first && b.second >= a.first }
+private fun part2(pairs: List<Pair<Pair<Int, Int>, Pair<Int, Int>>>): Int = pairs.count { (a, b) -> a.first <= b.first && a.second >= b.first || b.first <= a.first && b.second >= a.first }
