@@ -6,4 +6,5 @@ fun main() {
     println(findMarker(message, 14))
 }
 
-private fun findMarker(message: String, packetSize: Int): Int = (packetSize..message.length).find { message.substring(it - packetSize, it).toSet().size == packetSize } ?: 0
+private fun findMarker(message: String, packetSize: Int): Int = (packetSize..message.length)
+    .find { message.substring(it - packetSize, it).toSet().size == packetSize } ?: 0
